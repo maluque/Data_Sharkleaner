@@ -29,7 +29,7 @@ def categ_summ(df):
     
     '''
 
-    sumdf=df.describe(include = "object").T
+    sumdf=df.describe(include=["object", "category"]).T
     sumdf["unicount_ratio"]=sumdf["unique"]/sumdf["count"]
 
     sumdf["resto_abs"]=(sumdf["count"]-sumdf["freq"])
